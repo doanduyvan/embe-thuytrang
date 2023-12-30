@@ -12,11 +12,32 @@ main{
     width: 100%;
     
 }
+
+.tieude1{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    >span{
+        font-size: 25px;
+        font-weight: bold;
+        
+    }
+}
+.tieude2{
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+    >span{
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
 .date{
     width: 100%;
     display: flex;
     justify-content: space-around;
-    display: none;
+    /* display: none; */
     > .date_box{
         background-color: rgba(146, 143, 143,0.4);
         
@@ -92,7 +113,7 @@ overflow: hidden;
     >div{
         display: grid;
         place-items: center;
-        background-color: rgba(174, 173, 173,0.3);
+        background-color: rgba(174, 173, 173,0.6);
         width: 40px;
         height: 40px;
         border-radius: 50%;

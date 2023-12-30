@@ -37,3 +37,43 @@ function autoslide() {
     const width = slides[0].offsetWidth;
     slide.style.transform = `translateX(-${width * active}px)`;
 }
+
+
+function updateCountdown() {
+
+
+
+    const now = new Date();
+    const newYear = new Date(now.getFullYear() + 1, 0, 1, 0, 0, 0, 0); // Năm mới sẽ là năm hiện tại + 1
+    const timeLeft = newYear - now;
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+  //  const countdownElement = document.getElementById('countdown');
+  //  countdownElement.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+
+    // Nếu đến năm mới, có thể thực hiện một hành động khác ở đây
+    if (timeLeft <= 0) {
+      //  countdownElement.innerHTML = 'Happy New Year!';
+        // Thực hiện hành động cụ thể cho thời điểm năm mới
+    }else{
+        dom('.day').innerHTML = formatNumber(days);
+        dom('.hour').innerHTML = formatNumber(hours);
+        dom('.minute').innerHTML = formatNumber(minutes);
+        dom('.second').innerHTML = formatNumber(seconds);
+
+    }
+}
+
+// Gọi hàm updateCountdown mỗi giây
+setInterval(updateCountdown, 1000);
+
+// Gọi hàm ngay khi trang được tải để hiển thị ngay khi trang được mở
+updateCountdown();
+
+function formatNumber(number) {
+    return number < 10 ? `0${number}` : `${number}`;
+}
