@@ -62,8 +62,23 @@ overflow: hidden;
     } 
     > .item>.contents{
         position: absolute;
-        top: 50%;
+        bottom: 12%;
         left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        text-align: center;
+        background-color: rgba(106, 106, 106, 0.5);
+        border-radius: 20px;
+        padding: 10px;
+        color: white;
+        >span{
+            font-weight: bold;
+            font-size: 19px;
+        }
+        >p{
+            margin-top: 5px;
+            font-size: 17px;
+        }
     }
 }
 
