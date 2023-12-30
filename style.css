@@ -18,11 +18,15 @@ main{
     text-align: center;
     margin-top: 10px;
     margin-bottom: 5px;
-    >span{
+    /* >span{
         font-size: 25px;
         font-weight: bold;
         
-    }
+    } */
+}
+.tieude1>span:first-child{
+    font-weight: bold;
+    color: red;
 }
 .tieude2{
     width: 100%;
