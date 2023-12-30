@@ -6,6 +6,9 @@ function dom(selector,ALL = false){
     }
 }
 
+
+
+
 const slide = dom('.slides');
 const slides = dom('.item','ALL');
 const prev = dom('.btn .left');
